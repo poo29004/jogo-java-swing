@@ -144,6 +144,9 @@ public class App extends JPanel implements KeyListener {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
 
+        g2d.setColor(Color.BLACK);
+        g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
+
         if (!this.pausado) {
             // atualiza as coordenadas do objeto que se move
             this.movimentaObjeto();
@@ -297,7 +300,7 @@ public class App extends JPanel implements KeyListener {
     /**
      * Converte uma coordenada em pixels para uma coordenada em células
      * 
-     * @param pixel coordenada em pixels
+     * @param celula coordenada em pixels
      * @return coordenada em células
      */
     public int celulaParaPixel(int celula) {
@@ -308,7 +311,7 @@ public class App extends JPanel implements KeyListener {
     /**
      * Converte uma coordenada em células para uma coordenada em pixels
      * 
-     * @param celula coordenada em células
+     * @param pixel coordenada em células
      * @return coordenada em pixels
      */
     public int pixelParaCelula(int pixel) {
